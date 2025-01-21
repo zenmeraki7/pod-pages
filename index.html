@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Categories Carousel</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <style>
+        body {
+            background-color: #ffffff;
+            font-family: Arial, sans-serif;
+            color: #333333;
+        }
+
+        .search-bar {
+            background-color: #f7f7f7;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .search-bar input {
+            background-color: #ffffff;
+            border: 1px solid #ccc;
+            color: #333333;
+        }
+
+        .search-bar input::placeholder {
+            color: #888888;
+        }
+
+        .section-header h2 {
+            font-weight: bold;
+            color: #333333;
+        }
+
+        .section-header p {
+            color: #555555;
+            font-size: 16px;
+        }
+
+        .category-card {
+            background-color: #ffffff;
+            border: 1px solid #ccc;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .category-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .category-card img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+
+        .category-card .card-body {
+            text-align: center;
+            padding: 15px;
+        }
+
+        .category-card .card-title {
+            font-weight: bold;
+            color: #333333;
+        }
+
+        .category-card .card-text {
+            color: #555555;
+            font-size: 14px;
+        }
+
+        .carousel-control-prev,
+        .carousel-control-next {
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .carousel-control-prev:hover,
+        .carousel-control-next:hover {
+            background-color: rgba(0, 0, 0, 0.1);
+        }
+
+        .carousel-control-prev-icon,
+        .carousel-control-next-icon {
+            filter: invert(1);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container my-5">
+        <!-- Search Bar -->
+        <div class="mb-4 search-bar">
+            <input type="text" class="form-control" placeholder="Search for products, brands, categories, and print providers">
+        </div>
+
+        <!-- Header Section -->
+        <div class="section-header text-center">
+            <h2>Explore .. Best</h2>
+            <p>Take a look at our top-rated product categories.</p>
+        </div>
+
+        <!-- Carousel Section -->
+        <div id="categoriesCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <!-- Slide 1 -->
+                <div class="carousel-item active">
+                    <div class="row g-4">
+                        <div class="col-md-4 col-lg-3">
+                            <div class="card category-card">
+                                <img src="https://m.media-amazon.com/images/I/71U69KZLpvL._SY741_.jpg" alt="T-Shirts">
+                                <div class="card-body">
+                                    <h5 class="card-title">T-Shirts</h5>
+                                    <p class="card-text">Browse our versatile range of custom T-shirts for any occasion.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-lg-3">
+                            <div class="card category-card">
+                                <img src="https://m.media-amazon.com/images/I/61TZQ92Cq5L._SX679_.jpg" alt="Sweatshirts">
+                                <div class="card-body">
+                                    <h5 class="card-title">Sweatshirts</h5>
+                                    <p class="card-text">Stay snug and chic with our stylish sweatshirt lineup..</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-lg-3">
+                            <div class="card category-card">
+                                <img src="https://m.media-amazon.com/images/I/51DQkOJ2yvL._SX679_.jpg" alt="Hoodies">
+                                <div class="card-body">
+                                    <h5 class="card-title">Hoodies</h5>
+                                    <p class="card-text">Casual style meets customization in our premium hoodie collection.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-lg-3">
+                            <div class="card category-card">
+                                <img src="https://m.media-amazon.com/images/I/61VV7+cpCML._SY879_.jpg" alt="Baby Clothing">
+                                <div class="card-body">
+                                    <h5 class="card-title">Baby Clothing</h5>
+                                    <p class="card-text">Cuteness overload with our premium baby clothes.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 2 -->
+                <div class="carousel-item">
+                    <div class="row g-4">
+                        <div class="col-md-4 col-lg-3">
+                            <div class="card category-card">
+                                <img src="https://m.media-amazon.com/images/I/61lu6TiYmzL._SX679_.jpg" alt="Wall Decorations">
+                                <div class="card-body">
+                                    <h5 class="card-title">Sarees</h5>
+                                    <p class="card-text">Tradition, style, and grace—woven into perfection.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-lg-3">
+                            <div class="card category-card">
+                                <img src="https://m.media-amazon.com/images/I/61VhKKAtq3L._SX679_.jpg" alt="Supplements">
+                                <div class="card-body">
+                                    <h5 class="card-title">Tank tops</h5>
+                                    <p class="card-text">Stay cool, stay trendy with our versatile tank tops.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Carousel Controls -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#categoriesCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#categoriesCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- Starter Essentials Section -->
+    <div class="container my-5">
+        <div class="section-header d-flex justify-content-between align-items-center text-center">
+            <h2>Launch Your Store with These Must-Haves</h2>
+            <a href="#" class="text-decoration-underline text-dark">See all</a>
+        </div>
+        <p class="text-dark">Take the First Step with These Curated Products for New Sellers.</p>
+
+        <div class="row g-4">
+            <!-- Card 1 -->
+            <div class="col-md-3">
+                <div class="card category-card">
+                    <img src="https://giysi.in/cdn/shop/files/54.png?v=1728902449&width=1080" alt="Matte Canvas"
+                        class="card-img-top" data-hover="https://i.etsystatic.com/14099161/r/il/650c2e/3381571710/il_1080xN.3381571710_saee.jpg">
+                    <div class="card-body">
+                        <span class="badge bg-warning text-dark">Bestseller</span>
+                        <h5 class="card-title mt-2">Unisex Hoodies</h5>
+                        <p class="card-text">
+                            <strong>From USD 14.14</strong><br>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 2 -->
+            <div class="col-md-3">
+                <div class="card category-card">
+                    <img src="https://alfaq.in/cdn/shop/files/0T4A9798Large.png?v=1723117712&width=1200" alt="Unisex Softstyle T-Shirt"
+                        class="card-img-top" data-hover="https://www.yourprint.in/wp-content/uploads/2022/06/white-poly-1.jpg">
+                    <div class="card-body">
+                        <span class="badge bg-warning text-dark">Bestseller</span>
+                        <h5 class="card-title mt-2">Unisex Softstyle T-Shirt</h5>
+                        <p class="card-text">
+                            <strong>From USD 7.71</strong><br>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 3 -->
+            <div class="col-md-3">
+                <div class="card category-card">
+                    <img src="https://flyingcart.pk/cdn/shop/files/PURPLEFRONT_95ee5537-e6f2-4434-b724-51705bf59b71_533x.jpg?v=1705756908"
+                        alt="Unisex Garment-Dyed T-Shirt" class="card-img-top" data-hover="https://i.fbcd.co/products/resized/resized-750-500/preview-28d8a1e323a84f08fd19222031939afb3deef2a71ec3c72b28fcab878f6af438.jpg">
+                    <div class="card-body">
+                        <span class="badge bg-warning text-dark">Bestseller</span>
+                        <h5 class="card-title mt-2">Garment-Dyed T-Shirt</h5>
+                        <p class="card-text">
+                            <strong>From USD 14.63</strong><br>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 4 -->
+            <div class="col-md-3">
+                <div class="card category-card">
+                    <img src="https://images.meesho.com/images/products/373508887/oybzc_512.webp"
+                        alt="Tough Cases" class="card-img-top" data-hover="https://i.pinimg.com/736x/52/9d/58/529d583c64c31d38180852276c3f63e6.jpg">
+                    <div class="card-body">
+                        <span class="badge bg-warning text-dark">Bestseller</span>
+                        <h5 class="card-title mt-2">Womens hoodies</h5>
+                        <p class="card-text">
+                            <strong>From USD 15.00</strong><br>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- hot section -->
+    <div class="container my-5">
+        <div class="section-header d-flex justify-content-between align-items-center text-center">
+            <h2>Fresh Finds: Hot New Products You Can’t Miss!</h2>
+            <a href="#" class="text-decoration-underline text-dark">See all</a>
+        </div>
+        <p class="text-dark">Get an Edge with Our Newly Released Products!</p>
+
+        <div class="row g-4">
+            <!-- Card 1 -->
+            <div class="col-md-3">
+                <div class="card category-card">
+                    <img src="https://giysi.in/cdn/shop/files/54.png?v=1728902449&width=1080" alt="Matte Canvas"
+                        class="card-img-top" data-hover="https://i.etsystatic.com/14099161/r/il/650c2e/3381571710/il_1080xN.3381571710_saee.jpg">
+                    <div class="card-body">
+                        <span class="badge bg-warning text-dark">Bestseller</span>
+                        <h5 class="card-title mt-2">Unisex Hoodies</h5>
+                        <p class="card-text">
+                            <strong>From USD 14.14</strong><br>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 2 -->
+            <div class="col-md-3">
+                <div class="card category-card">
+                    <img src="https://alfaq.in/cdn/shop/files/0T4A9798Large.png?v=1723117712&width=1200" alt="Unisex Softstyle T-Shirt"
+                        class="card-img-top" data-hover="https://www.yourprint.in/wp-content/uploads/2022/06/white-poly-1.jpg">
+                    <div class="card-body">
+                        <span class="badge bg-warning text-dark">Bestseller</span>
+                        <h5 class="card-title mt-2">Unisex Softstyle T-Shirt</h5>
+                        <p class="card-text">
+                            <strong>From USD 7.71</strong><br>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 3 -->
+            <div class="col-md-3">
+                <div class="card category-card">
+                    <img src="https://flyingcart.pk/cdn/shop/files/PURPLEFRONT_95ee5537-e6f2-4434-b724-51705bf59b71_533x.jpg?v=1705756908"
+                        alt="Unisex Garment-Dyed T-Shirt" class="card-img-top" data-hover="https://i.fbcd.co/products/resized/resized-750-500/preview-28d8a1e323a84f08fd19222031939afb3deef2a71ec3c72b28fcab878f6af438.jpg">
+                    <div class="card-body">
+                        <span class="badge bg-warning text-dark">Bestseller</span>
+                        <h5 class="card-title mt-2">Garment-Dyed T-Shirt</h5>
+                        <p class="card-text">
+                            <strong>From USD 14.63</strong><br>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 4 -->
+            <div class="col-md-3">
+                <div class="card category-card">
+                    <img src="https://images.meesho.com/images/products/373508887/oybzc_512.webp"
+                        alt="Tough Cases" class="card-img-top" data-hover="https://i.pinimg.com/736x/52/9d/58/529d583c64c31d38180852276c3f63e6.jpg">
+                    <div class="card-body">
+                        <span class="badge bg-warning text-dark">Bestseller</span>
+                        <h5 class="card-title mt-2">Womens hoodies</h5>
+                        <p class="card-text">
+                            <strong>From USD 15.00</strong><br>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+<script>
+    $(document).ready(function(){
+        $(".category-card").hover(function(){
+            var newImage = $(this).find("img").data("hover");
+            var originalImage = $(this).find("img").attr("src");
+            
+            $(this).find("img").data("src", originalImage);
+            $(this).find("img").attr("src", newImage);
+        }, function(){
+            var originalImage = $(this).find("img").data("src");
+            $(this).find("img").attr("src", originalImage);
+        });
+    });
+</script>
+
+</html>
